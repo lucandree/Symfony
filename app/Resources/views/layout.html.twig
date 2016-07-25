@@ -1,0 +1,120 @@
+{# app/Resources/views/layout.html.twig #}
+
+
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>{% block title %}AlphaSourcing - One Stop Global Sourcing{% endblock %}</title>
+
+    {% block stylesheets %}
+      {# On charge le CSS de bootstrap depuis le site directement #}
+      <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    {% endblock %}
+  </head>
+<body>
+  <header>
+	  <div id="headerTop">
+	    <div class="container">		
+		    <div class="col-sm-4">
+			   <a href="/"><img src="bundles/asgalphasourcing/img/alpha.png" alt="Logo" width="90" height="90"></a>
+		    </div>
+		    <div class="col-sm-8 text-right info">
+			    <div id="address">
+				    <span class="glyphicon glyphicon-envelope"></span> 2 rue Andre Roux
+			    </div>
+			   <div id="phone">
+				    <span class="glyphicon glyphicon-earphone"></span> 0149309939
+			    </div>
+			    <div id="email">
+				    <span class="glyphicon glyphicon-envelope"></span> alphasourcing@gmail.com
+			    </div>
+		    </div>	
+	    </div>		
+
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav">        
+          <li>
+            <a href="{{ path('asg_alphasourcing_home') }}"><font style="color: #D8D5D5;">Accueil</font></a>
+          </li>
+          <li>
+            <a href="{{ path('asg_alphasourcing_presentation') }}"><font style="color: #D8D5D5;">Présentation</font></a>
+          </li>
+          <li>
+            <a href="{{ path('asg_alphasourcing_contact') }}"><font style="color: #D8D5D5;">Contact</font></a>
+          </li>
+          <li>
+            <a href="{{ path('asg_alphasourcing_partenaires') }}"><font style="color: #D8D5D5;">Partenaires</font></a>
+          </li>
+          <li>
+            <a href="connexion"><font style="color: #D8D5D5;">Connexion</font></a>
+          </li>
+          <li>
+            <a href="annonce"><font style="color: #D8D5D5;">Annonces</font></a>
+          </li>
+        </ul>
+      </div>
+    </div>
+	</header>
+  {% block body %}
+    
+  {% endblock %}
+	<footer>
+		<div class="container">
+	    <div class="row">
+		    <div class="col-sm-4">
+			    <h3 style="color: #D8D5D5;">Raccourcis</h3>
+			    <ul class="list-unstyled">
+				    <li><a href="{{ path('asg_alphasourcing_home') }}">Accueil</a></li>
+				    <li><a href="{{ path('asg_alphasourcing_partenaires') }}">Partenaires</a></li>
+				    <li><a href="{{ path('asg_alphasourcing_presentation') }}">A propos d'Alpha Sourcing</a></li>
+				    <li><a href="{{ path('asg_alphasourcing_contact') }}">Contact</a></li>
+				    <li><a href="">Connexion</a></li>
+			    </ul>
+		    </div>
+		    <div class="col-sm-4">
+			    <h3 style="color: #D8D5D5;">Nous contacter</h3>
+			    <address>
+				    <strong>1,rue république</strong><br>
+				    Versailles<br>
+				    <span class='glyphicon glyphicon-earphone'></span> 01.25.69.32.54<br>
+				    <span class='glyphicon glyphicon-thumbs-up'></span> alphasourcing@gmail.com<br>
+			    </address>
+		    </div>
+		    <div class="col-sm-4">
+			    <h3 style="color: #D8D5D5;">Réseaux sociaux</h3>
+			    <ul class="list-inline">
+				    <li>
+					    <a href='https://www.facebook.com/' target='_blank'>
+					    <span class='fa-stack fa-lg'>
+					    <i class='glyphicon glyphicon-phone'></i></i></span></a>
+				    </li>
+				    <li>
+					    <a href='https://twitter.com/' target='_blank'>
+					    <span class='fa-stack fa-lg'>
+					    <i class='glyphicon glyphicon-phone-alt'></i></span></a>
+				    </li>
+				    <li>
+					    <a href='https://plus.google.com/' target='_blank'>
+					    <span class='fa-stack fa-lg'>
+					    <i class='glyphicon glyphicon-envelope'></i></span></a>
+				    </li>
+				    <li>
+					    <a href='https://fr.linkedin.com/' target='_blank'>
+					    <span class='fa-stack fa-lg'>
+					    <i class='glyphicon glyphicon-file'></i></span></a>
+				    </li>
+			    </ul>
+		    </div>
+	    </div>
+    </div>
+	</footer>
+  {% block javascripts %}
+   {# Ajoutez ces lignes JavaScript si vous comptez vous servir des fonctionnalités du bootstrap Twitter #}
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  {% endblock %}
+</body>
+</html>

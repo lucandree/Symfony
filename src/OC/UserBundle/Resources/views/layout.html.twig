@@ -1,0 +1,36 @@
+{# src/OC/UserBundle/Ressources/views/layout.html.twig #}
+
+{# On étend notre layout #}
+{% extends "OCPlatformBundle::layout.html.twig" %}
+
+{# Dans notre layout, il faut définir le block body #}
+{% block body %}
+
+   {# On affiche les messages flash que définissent les contrôlleurs du bundle #}
+   {% for key, messages in app.sessionflashbag.all() %}
+      {% for message in message %}
+        <div class="alert alert-{{ key }}">
+          {{ message|trans({}, 'FOUserBundle') }}
+        </div>
+      {% endfor %}
+   {% endfor %}
+
+   {# On définit ce block, dans lequel vont venir s'insérer les autres vues du bundle #}
+   {% block fos_user_content %}
+   {% endblock fos_user_content %}
+
+   {% if is_granted("IS_AUTHENTICATED_REMEMBERED") %}
+       Connecté en tant que {{ app.user.username }}
+       -
+       <a href="{{ path('fos_user_security_logout') }}">Déconnexion</a>
+   {% else %}
+       <a href="{{ path('fos_user_security_login') }}">Connexion</a>
+   {% endif %}
+
+    {% stylesheets 'bundle/ocplatform/css/main.css' %}
+     'bundle/ocplatform/css/main.css'
+     'bundle/ocplatform/css/platform.css'
+     <link rel="stylesheet" href="{{ asset_url }}" type="text/css" />
+    {% endstylesheet %}
+
+{% endblock %}

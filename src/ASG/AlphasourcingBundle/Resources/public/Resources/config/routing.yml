@@ -1,0 +1,35 @@
+asg_alphasourcing_home:
+    path:     /{page}
+    defaults: 
+        _controller: ASGAlphasourcingBundle:Default:index
+        page:        1
+    requirements:
+        page: \d*
+
+asg_alphasourcing_view:
+    path:      /default/{id}
+    defaults:
+        _controller: ASGAlphasourcingBundle:Default:view
+    requirements:
+        id: \d+
+
+asg_alphasourcing_add:
+    path:      /add
+    defaults:
+        _controller: ASGAlphasourcingBundle:Default:add
+
+
+asg_alphasourcing_contact:
+    path:      /contact
+    defaults:
+        _controller: ASGAlphasourcingBundle:Default:contact
+
+asg_alphasourcing_partenaires:
+    path:      /partenaires
+    defaults:
+        _controller: ASGAlphasourcingBundle:Default:partenaires
+
+asg_alphasourcing_presentation:
+    path:      /presentation
+    defaults:
+        _controller: ASGAlphasourcingBundle:Default:presentation

@@ -1,0 +1,182 @@
+{# src/ASG/AlphasourcingBundle/Resources/views/Default/form.html.twig #}
+
+{# Cette vue n'hérite de personne, elle sera incluse par d'autres vues qui,
+
+   elles, hériteront probablement du layout. Je dis « probablement » car,
+
+   ici pour cette vue, on n'en sait rien et c'est une info qui ne nous concerne pas. #}
+
+<h3>Formulaire de Contact</h3>
+
+{# On laisse vide la vue pour l'instant, on la comblera plus tard lorsqu'on saura afficher un formulaire. #}
+
+
+<!doctype html>
+<html lang="fr">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">	
+	<title>Contacez-Nous</title>
+	<link rel="stylesheet" href="bootstrap.css" type="text/css">
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+</head>
+<body>
+	<header>
+	    <div id="headerTop">
+	        <div class="container">
+		        <div class="col-sm-4">
+			     <a href="/"><img src="img/alpha.png" alt="Logo" width="90" height="90"></a>
+		        </div>
+		        <div class="col-sm-8 text-right info">
+			        <div id="address">
+				     <span class="glyphicon glyphicon-envelope"></span> 2 rue Andre Roux
+			        </div>
+			        <div id="phone">
+				     <span class="glyphicon glyphicon-earphone"></span> 0149309939
+			        </div>
+			        <div id="email">
+				     <span class="glyphicon glyphicon-envelope"></span> luc@gmail.com
+			        </div>
+		        </div>	
+	        </div>		
+        </div>
+
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+                <li>
+                 <a href="index.html"><font style="color: #D8D5D5;">Accueil</font></a>
+                </li>
+                <li>
+                 <a href="presentation"><font style="color: #D8D5D5;">Présentation</font></a>
+                </li>
+                <li>
+                 <a href="contact.html"><font style="color: #D8D5D5;">Contact</font></a>
+                </li>
+                <li>
+                 <a href="partenaires.html"><font style="color: #D8D5D5;">Partenaires</font></a>
+                </li>
+                <li>
+                 <a href="connexion.html"><font style="color: #D8D5D5;">Connexion</font></a>
+                </li>
+                <li>
+                 <a href="annonce.html"><font style="color: #D8D5D5;">Annonces</font></a>
+                </li>
+            </ul>
+        </div>
+    </header>
+    <section>
+        <article>
+            <div class="container">
+                <form role="form" action="" method="post" >
+                    <div class="col-lg-6">
+                      <br><br>
+                        <div class="form-group">
+                         <label for="InputName">Nom</label>
+                         <div class="input-group">
+                         <input type="text" class="form-control" name="InputName" id="InputName" placeholder="Nom" required>
+                         <span class="input-group-addon"></span></div>
+                        </div>
+                        <div class="form-group">
+                         <label for="InputNumero">Numéro</label>
+                         <div class="input-group">
+                         <input type="text" class="form-control" name="InputNumero" id="InputNumero" placeholder="Numéro" required>
+                         <span class="input-group-addon"></span></div>
+                        </div>
+                        <div class="form-group">
+                         <label for="InputAdresse">Adresse</label>
+                         <div class="input-group">
+                         <input type="text" class="form-control" name="InputAdresse" id="InputAdresse" placeholder="Adresse" required>
+                         <span class="input-group-addon"></span></div>
+                        </div>
+                        <div class="form-group">
+                         <label for="InputEmail">Email</label>
+                         <div class="input-group">
+                         <input type="email" class="form-control" id="InputEmail" name="InputEmail" placeholder="Email" required  >
+                         <span class="input-group-addon"></span></div>
+                        </div>
+                        <div class="form-group">
+                         <label for="InputMessage">Message</label>
+                         <div class="input-group">
+                         <textarea name="InputMessage" id="InputMessage" class="form-control" rows="5" required></textarea>
+                         <span class="input-group-addon"></span></div>
+                        </div>
+      
+                        <input style="background-color:#D521AE; border-color:#D521AE;" type="submit" name="submit" id="submit" value="Valider" class="btn btn-info pull-right"><br><br>
+                    </div>
+                </form>
+                <br><br>
+                Suzy Carpentier<br>
+                Managing Director<br>
+                Email:<br>
+                s.carpentier@alphasourcing.fr<br><br>
+
+                Laurent Durieux<br>
+                Business Developpement Director<br>
+                Email:<br>
+                l.durieux@alphasourcing.fr<br><br>
+
+                Amy Diop<br>
+                Business Developpemt Director<br>
+                Email:<br>
+                a.diop@alphasourcing.fr<br><br>
+            </div>
+		    <br><br>	
+		    <div class="box3 clearfix" >		
+			 <img src="img/bg.jpeg" alt="arobas" style="width:100%; height:400px;" /> 
+			</div>
+		</article>
+	</section>
+	<footer>
+		<div class="container">
+	        <div class="row">
+		        <div class="col-sm-4">
+			        <h3 style="color: #D8D5D5;">Raccourcis</h3>
+			        <ul class="list-unstyled">
+				     <li><a href="index">Accueil</a></li>
+				     <li><a href="partenaires">Partenaires</a></li>
+				     <li><a href="presentation">A propos d'Alpha Sourcing</a></li>
+				     <li><a href="contact">Contact</a></li>
+				     <li><a href="inscription">Inscription</a></li>
+			        </ul>
+		        </div>
+		        <div class="col-sm-4">
+			        <h3 style="color: #D8D5D5;">Nous contacter</h3>
+			        <address>
+				        <strong>1,rue république</strong><br>
+				        Versailles<br>
+				        <span class='glyphicon glyphicon-earphone'></span> 01.25.69.32.54<br>
+				        <span class='glyphicon glyphicon-thumbs-up'></span> alphasourcing@gmail.com<br>
+			        </address>
+		        </div>
+		        <div class="col-sm-4">
+			        <h3 style="color: #D8D5D5;">Réseaux sociaux</h3>
+			        <ul class="list-inline">
+				        <li>
+					      <a href='https://www.facebook.com/' target='_blank'>
+					      <span class='fa-stack fa-lg'>
+					      <i class='glyphicon glyphicon-phone'></i></i></span></a>
+				        </li>
+				        <li>
+					      <a href='https://twitter.com/' target='_blank'>
+					      <span class='fa-stack fa-lg'>
+					      <i class='glyphicon glyphicon-phone-alt'></i></span></a>
+				        </li>
+				        <li>
+					      <a href='https://plus.google.com/' target='_blank'>
+					      <span class='fa-stack fa-lg'>
+					      <i class='glyphicon glyphicon-envelope'></i></span></a>
+				        </li>
+				        <li>
+					      <a href='https://fr.linkedin.com/' target='_blank'>
+					      <span class='fa-stack fa-lg'>
+					      <i class='glyphicon glyphicon-file'></i></span></a>
+				        </li>
+			        </ul>
+		        </div>
+	        </div>
+        </div>
+	</footer>
+</body>
+</html>

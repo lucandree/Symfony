@@ -1,0 +1,16 @@
+{# src/ASG/AlphasourcingBundle/Resources/views/Default/add.html.twig #}
+
+{% extends "ASGAlphasourcingBundle::layout.html.twig" %}
+
+{% block body %}
+
+  <h2>Renseignez-Vous</h2>
+
+  {{ include("ASGAlphasourcingBundle:Default:form.html.twig") }}
+
+  <p>
+    Attention : cette annonce sera ajoutée directement
+    sur la page d'accueil après validation du formulaire.
+  </p>
+
+{% endblock %}
